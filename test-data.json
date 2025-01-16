@@ -15,24 +15,6 @@
   ],
 
   "receiptTotal": 13.99,
-  "paperReceiptTest": [
-    {"printLine": "- [ P97 NETWORKS ] -"},
-    {"printLine": "POWERED BY PETROZONE "},
-    {"printLine": "Citgo Auto Sim"},
-    {"printLine": "10900 Northeast 8th Street"},
-    {"printLine": "DATE       Time"},
-    {"printLine": "4/18/2024 10:58:50 AM"},
-    {"printLine": ""},
-    {"printLine": "DESCRIPTION              QTY  AMOUNT"},
-    {"printLine": "-----------              ---  ------"},
-    {"printLine": "Regular                  5.000  13.99"},
-    {"printLine": ""},
-    {"printLine": "Rewards Total:                  0"},
-    {"printLine": "Subtotal:                       13.99"},
-    {"printLine": "Total:                          13.99"},
-    {"printLine": ""},
-    {"printLine": "Thank You!"}
-  ],
   "derivedData": {
     "paperReceiptArray": [
       {
@@ -130,7 +112,7 @@
         {
           "backColor": "#636F78,#333F48|T-B",
           "titleColor": "#ffffff",
-          "showBackImage": "true",
+          "showBackImage": "false",
           "backImageURL": "https://picsum.photos/400/800",
           "showWelcome": "true",
           "showPoints": "false",

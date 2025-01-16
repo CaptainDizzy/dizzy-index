@@ -35726,7 +35726,7 @@
           "syncActions": [
             {
               "cmd": "GetJSONFromURL",
-              "target": "http://192.168.1.68:8080/test-data.json",
+              "target": "https://captaindizzy.github.io/dizzy-index/test-data.json",
               "dataContainer": "Custom_ExternalJSONData"
             },
             {
@@ -36181,7 +36181,7 @@
           "syncActions": [
             {
               "cmd": "GetJSONFromURL",
-              "target": "http://192.168.1.68:8080/test-data.json",
+              "target": "https://captaindizzy.github.io/dizzy-index/test-data.json",
               "dataContainer": "Custom_ExternalJSONData"
             }
           ]

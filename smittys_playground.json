@@ -35718,7 +35718,24 @@
               "cmd": "GetJSONFromURL",
               "target": "https://captaindizzy.github.io/dizzy-index/test-data.json",
               "dataContainer": "Custom_ExternalJSONData"
-            },
+            }
+          ]
+        }
+      ],
+      "children": [
+        {
+          "type": "Reference",
+          "name": "Header",
+          "reference": "|~ StaticContent.CommonComponents.Headers.PlaygroundHeaderThinMenuDate ~|",
+          "staticParameters": {
+            "headerTitle": "Playground"
+          }
+        },
+        {
+          "type": "ContainerVertical",
+          "name": "Content",
+          "sizeV": "92%",
+          "loadActions": [
             {
               "cmd": "Switch",
               "cases": [
@@ -35757,22 +35774,7 @@
                 }
               ]
             }
-          ]
-        }
-      ],
-      "children": [
-        {
-          "type": "Reference",
-          "name": "Header",
-          "reference": "|~ StaticContent.CommonComponents.Headers.PlaygroundHeaderThinMenuDate ~|",
-          "staticParameters": {
-            "headerTitle": "Playground"
-          }
-        },
-        {
-          "type": "ContainerVertical",
-          "name": "Content",
-          "sizeV": "92%",
+          ],
           "children": [
             {
               "type": "ContainerVertical",

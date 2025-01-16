@@ -112,7 +112,7 @@
         {
           "backColor": "#636F78,#333F48|T-B",
           "titleColor": "#ffffff",
-          "showBackImage": "false",
+          "showBackImage": "true",
           "backImageURL": "https://picsum.photos/400/800",
           "showWelcome": "true",
           "showPoints": "false",

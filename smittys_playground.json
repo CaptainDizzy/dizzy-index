@@ -35664,16 +35664,6 @@
               }
             },
             {
-              "type": "Reference",
-              "name": "MenuItem",
-              "reference": "|~ StaticContent.CommonComponents.Buttons.ButtonTextArrow ~|",
-              "staticParameters": {
-                "buttonText": "Smitty's Home",
-                "buttonTarget": "SmittysHome",
-                "buttonLineVisibility": "visible"
-              }
-            },
-            {
               "type": "ContainerHorizontal",
               "name": "HRLine",
               "sizeV": "0.15y",

@@ -1,0 +1,203 @@
+{
+  "name": "TestData",
+  "itemArrayIndex": 0,
+  "itemArray": [
+    "Item 0",
+    "Item 1",
+    "Item 2",
+    "Item 3",
+    "Item 4",
+    "Item 5",
+    "Item 6",
+    "Item 7",
+    "Item 8",
+    "Item 9"
+  ],
+
+  "receiptTotal": 13.99,
+  "paperReceiptTest": [
+    {"printLine": "- [ P97 NETWORKS ] -"},
+    {"printLine": "POWERED BY PETROZONE "},
+    {"printLine": "Citgo Auto Sim"},
+    {"printLine": "10900 Northeast 8th Street"},
+    {"printLine": "DATE       Time"},
+    {"printLine": "4/18/2024 10:58:50 AM"},
+    {"printLine": ""},
+    {"printLine": "DESCRIPTION              QTY  AMOUNT"},
+    {"printLine": "-----------              ---  ------"},
+    {"printLine": "Regular                  5.000  13.99"},
+    {"printLine": ""},
+    {"printLine": "Rewards Total:                  0"},
+    {"printLine": "Subtotal:                       13.99"},
+    {"printLine": "Total:                          13.99"},
+    {"printLine": ""},
+    {"printLine": "Thank You!"}
+  ],
+  "derivedData": {
+    "paperReceiptArray": [
+      {
+        "item": "[ - [ P97 NETWORKS ] -"
+      },
+      {
+        "item": "POWERED BY PETROZONE "
+      },
+      {
+        "item": "Automation Regression Lab 1"
+      },
+      {
+        "item": "Site ID: 0315-8125"
+      },
+      {
+        "item": "22525 Clay Road"
+      },
+      {
+        "item": "DATE       Time"
+      },
+      {
+        "item": "12/9/2024 4:42:01 AM"
+      },
+      {
+        "item": "Trace#: 19a74d97-c9b2-41eb-ae7c-170d0faa75a0"
+      },
+      {
+        "item": "Pump #: 2"
+      },
+      {
+        "item": "Visa"
+      },
+      {
+        "item": "49455043xxxxxxxx"
+      },
+      {
+        "item": "AUTH #: 105683"
+      },
+      {
+        "item": "Card: Visa"
+      },
+      {
+        "item": "Acct #: XXXXXXXXXXXX8527"
+      },
+      {
+        "item": " "
+      },
+      {
+        "item": " "
+      },
+      {
+        "item": "<CUSTOMER COPY>                "
+      },
+      {
+        "item": ""
+      },
+      {
+        "item": "DESCRIPTION              QTY  AMOUNT"
+      },
+      {
+        "item": "-----------              ---  ------"
+      },
+      {
+        "item": "Regular                  5.000  14"
+      },
+      {
+        "item": " "
+      },
+      {
+        "item": "Rewards Total:                  0"
+      },
+      {
+        "item": "Sub total:                      14"
+      },
+      {
+        "item": "Total:                          14"
+      },
+      {
+        "item": " "
+      },
+      {
+        "item": " "
+      },
+      {
+        "item": "Thank You!]"
+      }
+    ]
+  },
+
+  "testURL": "http://192.168.1.68:8080/test.html",
+
+  "homeData": [
+    {
+      "hero": [
+        {
+          "backColor": "#636F78,#333F48|T-B",
+          "titleColor": "#ffffff",
+          "showBackImage": "false",
+          "backImageURL": "https://picsum.photos/400/800",
+          "showWelcome": "true",
+          "showPoints": "false",
+          "showFuelSavings": "true",
+          "showMobilePay": "true"
+        }
+      ],
+      "body": [
+        {
+          "showSweepsBanner": "false",
+          "showRiP": "true",
+          "showOffers": "false",
+          "showBarcode": "false",
+          "showCustomOffers": "true"
+        }
+      ],
+      "customOffers": [
+        {
+          "name": "Offer One",
+          "id": "CO_1",
+          "category": "SmittysCO",
+          "hidden": "false",
+          "expDate": "11/30/25",
+          "longDescription": "Offer 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In auctor iaculis felis, nec pulvinar lorem tristique ut.",
+          "shortDescription": "Offer 1: Lorem ipsum dolor sit amet.",
+          "thumbnailURL": "https://picsum.photos/150",
+          "imageURL": "https://picsum.photos/300",
+          "terms": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In auctor iaculis felis, nec pulvinar lorem tristique ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus a nulla in ipsum semper fermentum et egestas eros. Donec viverra id tellus et lacinia. Donec bibendum fermentum justo. Duis orci magna, tincidunt in urna nec, lacinia scelerisque purus. Aliquam erat volutpat. Pellentesque non velit sollicitudin, cursus ipsum id, pretium velit. In non efficitur ante. Etiam consequat justo vel velit efficitur, id lacinia augue elementum. Curabitur nec condimentum tellus. Aenean efficitur aliquam ipsum, in sollicitudin felis faucibus nec."
+        },
+        {
+          "name": "Offer Two",
+          "id": "CO_2",
+          "category": "SmittysCO",
+          "hidden": "false",
+          "expDate": "Jan. 31 2025",
+          "longDescription": "Offer 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In auctor iaculis felis, nec pulvinar lorem tristique ut.",
+          "shortDescription": "Offer 2: Lorem ipsum dolor sit amet.",
+          "thumbnailURL": "https://picsum.photos/150",
+          "imageURL": "https://picsum.photos/300",
+          "terms": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In auctor iaculis felis, nec pulvinar lorem tristique ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus a nulla in ipsum semper fermentum et egestas eros. Donec viverra id tellus et lacinia. Donec bibendum fermentum justo. Duis orci magna, tincidunt in urna nec, lacinia scelerisque purus. Aliquam erat volutpat. Pellentesque non velit sollicitudin, cursus ipsum id, pretium velit. In non efficitur ante. Etiam consequat justo vel velit efficitur, id lacinia augue elementum. Curabitur nec condimentum tellus. Aenean efficitur aliquam ipsum, in sollicitudin felis faucibus nec."
+        },
+        {
+          "name": "Offer Three",
+          "id": "CO_3",
+          "category": "SmittysCO",
+          "hidden": "false",
+          "expDate": "Jan. 31 2025",
+          "longDescription": "Offer 3: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In auctor iaculis felis, nec pulvinar lorem tristique ut.",
+          "shortDescription": "Offer 3: Lorem ipsum dolor sit amet.",
+          "thumbnailURL": "https://picsum.photos/150",
+          "imageURL": "https://picsum.photos/300",
+          "terms": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In auctor iaculis felis, nec pulvinar lorem tristique ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus a nulla in ipsum semper fermentum et egestas eros. Donec viverra id tellus et lacinia. Donec bibendum fermentum justo. Duis orci magna, tincidunt in urna nec, lacinia scelerisque purus. Aliquam erat volutpat. Pellentesque non velit sollicitudin, cursus ipsum id, pretium velit. In non efficitur ante. Etiam consequat justo vel velit efficitur, id lacinia augue elementum. Curabitur nec condimentum tellus. Aenean efficitur aliquam ipsum, in sollicitudin felis faucibus nec."
+        },
+        {
+          "name": "Offer Four",
+          "id": "CO_4",
+          "category": "SmittysCO",
+          "hidden": "false",
+          "expDate": "Jan. 31 2025",
+          "longDescription": "Offer 4: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In auctor iaculis felis, nec pulvinar lorem tristique ut.",
+          "shortDescription": "Offer 4: Lorem ipsum dolor sit amet.",
+          "thumbnailURL": "https://picsum.photos/150",
+          "imageURL": "https://picsum.photos/300",
+          "terms": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In auctor iaculis felis, nec pulvinar lorem tristique ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus a nulla in ipsum semper fermentum et egestas eros. Donec viverra id tellus et lacinia. Donec bibendum fermentum justo. Duis orci magna, tincidunt in urna nec, lacinia scelerisque purus. Aliquam erat volutpat. Pellentesque non velit sollicitudin, cursus ipsum id, pretium velit. In non efficitur ante. Etiam consequat justo vel velit efficitur, id lacinia augue elementum. Curabitur nec condimentum tellus. Aenean efficitur aliquam ipsum, in sollicitudin felis faucibus nec."
+        }
+      ]
+    }
+  ]
+}
+

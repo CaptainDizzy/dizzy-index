@@ -1,0 +1,87 @@
+html {
+  position: relative;
+  font-family: sans-serif;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000;
+}
+
+button#open-fullscreen-btn, button#close-fullscreen-btn {
+  border: none;
+  background-color: transparent;
+  display: none;
+}
+
+button#close-fullscreen-btn {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+}
+
+button#open-fullscreen-btn {
+  position: fixed;
+  top: 60px;
+  right: 60px;
+  opacity: 0.33;
+}
+  button#open-fullscreen-btn:hover {
+    opacity: 0.66;
+  }
+
+button#open-fullscreen-btn img {
+  filter: contrast(0);
+}
+
+button#open-fullscreen-btn.active, button#close-fullscreen-btn.active {
+  display: block;
+}
+
+#clock {
+  display: block;
+  position: absolute;
+  right: 64px;
+  bottom: 64px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 6vw;
+  font-weight: 200;
+  color: rgba(256,256,256,0.15);
+}
+
+.fullscreen-intro {
+  position: fixed;
+  display: block;
+  font-size: 32px;
+  color: #fff;
+  top: 50vh;
+  left: 0;
+  right: 0;
+  text-align: center;
+  opacity: 0.33;
+  transition: all 5s ease-out;
+}
+
+:-webkit-full-screen .fullscreen-intro {
+  opacity: 0;
+}
+
+:-moz-full-screen .fullscreen-intro {
+  opacity: 0;
+}
+
+:-ms-fullscreen .fullscreen-intro {
+  opacity: 0;
+}
+
+:fullscreen .fullscreen-intro {
+  opacity: 0;
+}
+
+/*Overrides*/
+button:focus, input:focus {
+  outline: none !important;
+}

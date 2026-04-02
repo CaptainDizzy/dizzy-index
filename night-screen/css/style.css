@@ -94,6 +94,114 @@ button#open-fullscreen-btn.active, button#close-fullscreen-btn.active {
   opacity: 0;
 }
 
+#eye-left {
+  top: 25vh;
+  left: 25vw;
+}
+#eye-right {
+  top: 25vh;
+  left: 35vw;
+}
+.eyes {
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 0px;
+  border-radius: 100%;
+  background-color: #000;
+  box-shadow: 0px 0px 0px #ffffff;
+  opacity: 75%;
+}
+.eyes::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 0px;
+  width: 0px;
+  left: calc(50% - 5px);
+  top: calc(50% - 12.5px);
+  border-radius: 34%;
+  background-color: #ffffff;
+  opacity: 33%;
+}
+.eyes.open::after {
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  animation-name: open-pupil;
+}
+.eyes.closed::after {
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+  animation-name: close-pupil;
+}
+
+.open {
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+  animation-name: open-eye;
+}
+.closed {
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+  animation-name: close-eye;
+}
+
+@keyframes open-eye {
+  0% {
+    height: 0px;
+    box-shadow: 0px 0px 0px #fff;
+  }
+  100% {
+    height: 25px;
+    box-shadow: 0px 0px 10px #fff;
+  }
+}
+@keyframes open-pupil {
+  0% {
+    width: 0px;
+    height: 0px;
+    left: calc(50% - 0px);
+    top: 5px;
+  }
+  50% {
+    width: 2px;
+    height: 25px;
+    left: calc(50% - 1px);
+    top: calc(50% - 12.5px);
+  }
+  100% {
+    width: 10px;
+    height: 25px;
+    left: calc(50% - 5px);
+    top: calc(50% - 12.5px);
+  }
+}
+@keyframes close-eye {
+  0% {
+    height: 25px;
+    box-shadow: 0px 0px 10px #fff;
+  }
+  100% {
+    height: 0px;
+    box-shadow: 0px 0px 0px #fff;
+  }
+}
+@keyframes close-pupil {
+  0% {
+    width: 10px;
+    height: 25px;
+    left: calc(50% - 5px);
+    top: calc(50% - 12.5px);
+  }
+  100% {
+    width: 0px;
+    height: 0px;
+    left: 50%;
+    top: 2px;
+  }
+}
+
+
 /*Overrides*/
 button:focus, input:focus {
   outline: none !important;

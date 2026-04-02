@@ -1,6 +1,6 @@
-
 /***THIS FILE REQUIRES JQUERY***/
 
+/***Fullscreen Handling***/
 var isFullscreen = false;
 
 $("#open-fullscreen-btn").click(function () {
@@ -57,3 +57,30 @@ function browserClass() {
   $("#close-fullscreen-btn").removeClass("active");
   $("#open-fullscreen-btn").addClass("active");
 }
+
+/***Random Eyes***/
+function getRandomInt(min, max) {
+  const minCeiled = Math.ceil(min);
+  const maxFloored = Math.floor(max);
+  return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
+}
+
+
+
+function openEyes() {
+  $('.eyes').removeClass('closed');
+  $('.eyes').addClass('open');
+  let randomTime = getRandomInt(10000, 15000);
+  console.log('Eyes are open. closeEyes() will execute in ' + (randomTime/1000) + ' seconds.');
+  setTimeout(closeEyes, randomTime);
+}
+function closeEyes() {
+  $('.eyes').removeClass('open');
+  $('.eyes').addClass('closed');
+  let randomTime = getRandomInt(10000, 15000);
+  console.log('Eyes are closed. openEyes() will execute in ' + (randomTime/1000) + ' seconds.');
+  setTimeout(openEyes, randomTime);
+}
+let initialRandomTime = getRandomInt(10000, 15000);
+setTimeout(openEyes, initialRandomTime);
+console.log("openEyes() will execute in " + (initialRandomTime/1000) + " seconds.");

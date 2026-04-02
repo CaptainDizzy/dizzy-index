@@ -1,27 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Night-Time Browser</title>
-  <meta name="description" content="It's night-time for this ol' browser tab. Let's let it sleep.">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <button id="open-fullscreen-btn" class="active" type="button"><img src="fullscreen.png" /></button>
-  <button id="close-fullscreen-btn" type="button">
+  <head>
+    <meta charset="utf-8" />
+    <title>Night-Time Browser</title>
+    <meta name="description" content="It's night-time for this ol' browser tab. Let's let it sleep." />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <button id="eyes-on-btn" class="toggle-btn toggle-eyes-btn active" type="button"><img src="eye-on.svg" /></button>
+    <button id="eyes-off-btn" class="toggle-btn toggle-eyes-btn" type="button"><img src="eye-off.svg" /></button>
+    <button id="open-fullscreen-btn" class="toggle-btn active" type="button"><img src="fullscreen.png" /></button>
+    <button id="close-fullscreen-btn" class="toggle-btn" type="button">
       <span class="fullscreen-intro fade">Press ESC or click anywhere to exit fullscreen.</span>
-  </button>
+    </button>
 
-  <span id="clock">&nbsp;</span>
-  <span id="date">&nbsp;</span>
-  <span id="eye-left" class="eyes">&nbsp;</span>
-  <span id="eye-right" class="eyes">&nbsp;</span>
+    <span id="clock">&nbsp;</span>
+    <span id="date">&nbsp;</span>
+    <span id="eye-left" class="eyes">&nbsp;</span>
+    <span id="eye-right" class="eyes">&nbsp;</span>
 
-  <script src="js/jquery-3.3.1.min.js"></script><!--This must be declared before other scripts-->
-  <script src="js/scripts.js"></script>
-  <script src="js/clock.js"></script>
-</body>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!--This must be declared before other scripts-->
+    <script src="js/scripts.js"></script>
+    <script src="js/clock.js"></script>
+  </body>
 </html>

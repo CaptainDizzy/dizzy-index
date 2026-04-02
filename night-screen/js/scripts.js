@@ -1,5 +1,5 @@
 
-/***THIS FILE REQUIRE JQUERY***/
+/***THIS FILE REQUIRES JQUERY***/
 
 var isFullscreen = false;
 

@@ -25,9 +25,9 @@ button#close-fullscreen-btn {
 
 button#open-fullscreen-btn {
   position: fixed;
-  top: 60px;
-  right: 60px;
-  opacity: 0.33;
+  top: 3vw;
+  right: 3vw;
+  opacity: 0.5;
 }
   button#open-fullscreen-btn:hover {
     opacity: 0.66;
@@ -43,13 +43,26 @@ button#open-fullscreen-btn.active, button#close-fullscreen-btn.active {
 
 #clock {
   display: block;
-  position: absolute;
-  right: 64px;
-  bottom: 64px;
+  position: fixed;
+  right: 3vw;
+  bottom: 13vh;
   font-family: 'Oswald', sans-serif;
-  font-size: 6vw;
+  font-size: 13vh;
+  line-height: 13vh;
   font-weight: 200;
-  color: rgba(256,256,256,0.15);
+  color: rgba(256, 256, 256, 0.25);
+}
+
+#date {
+  display: block;
+  position: absolute;
+  right: 3vw;
+  bottom: 5vh;
+  font-family: 'Oswald', sans-serif;
+  font-size: 5vh;
+  line-height: 5vh;
+  font-weight: 200;
+  color: rgba(256,256,256,0.25);
 }
 
 .fullscreen-intro {

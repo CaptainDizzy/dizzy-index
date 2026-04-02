@@ -5,8 +5,10 @@ $(function() {
 });
 
 function updateClock() {
-  var currentTime = new Date();
-  var currentTimeString = currentTime.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
+  var currentDate = new Date();
+  var currentTimeString = currentDate.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
+  var currentDateString = currentDate.toLocaleDateString('en-US', {month: "long", day: "numeric", year: "numeric"});
   // Update the time display
   document.getElementById("clock").firstChild.nodeValue = currentTimeString;
+  document.getElementById("date").firstChild.nodeValue = currentDateString;
 }

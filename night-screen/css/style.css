@@ -200,7 +200,7 @@ button#open-fullscreen-btn img {
     height: 0px;
     box-shadow: 0px 0px 0px #fff;
   }
-}
+} 
 @keyframes close-pupil {
   0% {
     width: 10px;

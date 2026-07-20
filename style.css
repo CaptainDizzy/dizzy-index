@@ -44,19 +44,16 @@ html {
   grid-template-rows: 38.2% auto 38.2%;
 }
 
-#topTitle {
-  text-align: center;
-  grid-column: 2 / 3;
-  grid-row: 1;
-  align-content: end;
+#pageTitle {
+  text-align: Left;
 }
-#topTitle .title {
+#pageTitle .title {
   font-size: 3em;
   font-weight: 600;
   margin: 0;
   line-height: 0.75em;
 }
-#topTitle .subtitle {
+#pageTitle .subtitle {
   margin: 0;
   padding-top: 34px;
   font-size: 2em;
@@ -65,17 +62,14 @@ html {
   text-transform: uppercase;
 }
 
-#bottomMenu {
+#topMenu {
   text-align: center;
-  grid-column: 2 / 3;
-  grid-row: 3;
-  align-content: start;
 }
-#bottomMenu .menuTitle {
+#topMenu .menuTitle {
   margin: 0;
   line-height: 0.75em;
 }
-#bottomMenu .details {
+#topMenu .details {
   display: block;
   margin: 0;
   padding-top: 21px;
@@ -83,7 +77,7 @@ html {
   line-height: 0.75em;
   font-weight: 100;
 }
-#bottomMenu #poisonMenu {
+#topMenu {
   display: grid;
   grid-auto-flow: column;
   margin: 0;
@@ -92,18 +86,18 @@ html {
   line-height: 0.75em;
   font-weight: 100;
 }
-#bottomMenu #poisonMenu .link-wrap a {
+#topMenu .menu-item a {
   display: inline-block;
   text-decoration: none;
   color: #ffffff;
   font-weight: 600;
 }
-#bottomMenu #poisonMenu .link-wrap a:hover {
+#topMenu .menu-item a:hover {
   text-decoration: none;
   color: #7744ff;
   font-weight: 600;
 }
-#bottomMenu #poisonMenu .link-wrap a:hover::after {
+#topMenu .menu-item a:hover::after {
   content: "";
   display: block;
   width: 100%;

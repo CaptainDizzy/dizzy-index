@@ -1,100 +1,50 @@
+/*** VARIABLES ***/
+:root {
+  --theme-white: #efefef;
+  --theme-black: #1a1a1a;
+  --theme-primary: #37691e;
+  --theme-primary-light: #77c400;
+  --theme-secondary: #443050;
+  --theme-secondary-light: #7d31ff;
+  --theme-accent: #ffaa00;
+}
+
 html {
-  background-color: #1a1a1a;
+  background-color: var(--theme-white);
   font-family: "Be Vietnam Pro", sans-serif !important;
   font-weight: 400;
   font-style: normal;
-  color: #ffffff;
+  color: var(--theme-black);
 }
 
-#bg {
-  position: absolute;
-  left: 0;
+#topMenu {
+  position: fixed;
+  height: 10.66vh;
   top: 0;
   right: 0;
-  bottom: 0;
-  opacity: 0.15;
-  z-index: -10;
-}
-#bg-left {
-  display: block;
-  position: absolute;
-  height: 100vh;
   left: 0;
-}
-#bg-right {
-  display: block;
-  position: absolute;
-  height: 100vh;
-  right: 0;
-}
-#bg .purple-bar {
-  position: absolute;
-  width: calc(100vw - 116.13vh);
-  height: 0.45vh;
-  right: 0;
-  bottom: 0;
-  background-color: #7744ff;
-}
-
-#contentWrapper {
-  display: grid;
-  height: 100vh;
-  width: 100vw;
-  grid-template-columns: auto 61.8% auto;
-  grid-template-rows: 38.2% auto 38.2%;
-}
-
-#pageTitle {
-  text-align: Left;
-}
-#pageTitle .title {
-  font-size: 3em;
-  font-weight: 600;
-  margin: 0;
-  line-height: 0.75em;
-}
-#pageTitle .subtitle {
-  margin: 0;
-  padding-top: 34px;
-  font-size: 2em;
-  font-weight: 300;
-  line-height: 0.75em;
-  text-transform: uppercase;
-}
-
-#topMenu {
-  text-align: center;
-}
-#topMenu .menuTitle {
-  margin: 0;
-  line-height: 0.75em;
-}
-#topMenu .details {
-  display: block;
-  margin: 0;
-  padding-top: 21px;
+  padding: 0 100px;
+  text-align: right;
+  background-color: var(--theme-white);
   font-size: 1em;
   line-height: 0.75em;
   font-weight: 100;
+  z-index: 10;
 }
-#topMenu {
-  display: grid;
-  grid-auto-flow: column;
-  margin: 0;
-  padding-top: 34px;
-  font-size: 1em;
-  line-height: 0.75em;
-  font-weight: 100;
+#topMenu .menu-item {
+  display: inline-block;
+  width: auto;
+  margin: 50px 0 50px 50px;
 }
 #topMenu .menu-item a {
   display: inline-block;
   text-decoration: none;
-  color: #ffffff;
+  color: var(--theme-primary);
   font-weight: 600;
 }
 #topMenu .menu-item a:hover {
   text-decoration: none;
-  color: #7744ff;
+  color: var(--theme-primary-light);
   font-weight: 600;
 }
 #topMenu .menu-item a:hover::after {
@@ -103,5 +53,117 @@ html {
   width: 100%;
   height: 5px;
   margin-top: 5px;
-  background-color: #3d224d;
+  background-color: var(--theme-primary-light);
+}
+
+#contentWrapper {
+  height: 100vh;
+  width: 100%;
+  margin-top: 115px;
+}
+.width-wrapper {
+  margin: 0;
+  padding: 0 100px;
+}
+
+#hero {
+  position: relative;
+  height: 66vh;
+  margin-top: 34vh;
+  text-align: Left;
+  color: var(--theme-primary);
+}
+.title {
+  font-size: 4em;
+  font-weight: 600;
+  margin: 0;
+  line-height: 0.75em;
+}
+.title-note {
+  display: inline-block;
+  margin-top: 2.3vh;
+  font-size: 1.5em;
+  font-weight: 200;
+  line-height: 0.75em;
+  color: var(--theme-primary-light);
+}
+#hero .subtitle {
+  margin-top: 4.63vh;
+  font-size: 3em;
+  font-weight: 600;
+  line-height: 0.75em;
+}
+#heroAngle {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 61.8vh;
+}
+#heroAngle svg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  fill: var(--theme-primary);
+  stroke: var(--theme-primary);
+}
+
+#work .title {
+  position: absolute;
+  top: 95vh;
+  left: 0;
+  right: 0;
+  display: block;
+  align-self: center;
+}
+.project {
+  margin-left: -100px;
+  margin-right: -100px;
+  padding: 9.25vh 100px;
+}
+
+/*** OVERRIDES ***/
+.center-text {
+  text-align: center;
+}
+.white-text {
+  color: var(--theme-white);
+}
+.black-text {
+  color: var(--theme-black);
+}
+.primary-text {
+  color: var(--theme-primary);
+}
+.primary-light-text {
+  color: var(--theme-primary-light);
+}
+.secondary-text {
+  color: var(--theme-secondary);
+}
+.secondary-light-text {
+  color: var(--theme-secondary-light);
+}
+.accent-text {
+  color: var(--theme-accent);
+}
+.white-bg {
+  background-color: var(--theme-white);
+}
+.black-bg {
+  background-color: var(--theme-black);
+}
+.primary-bg {
+  background-color: var(--theme-primary);
+}
+.primary-light-bg {
+  background-color: var(--theme-primary-light);
+}
+.secondary-bg {
+  background-color: var(--theme-secondary);
+}
+.secondary-light-bg {
+  background-color: var(--theme-secondary-light);
+}
+.accent-bg {
+  background-color: var(--theme-accent);
 }

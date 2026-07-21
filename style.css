@@ -12,14 +12,21 @@
 html {
   background-color: var(--theme-white);
   font-family: "Be Vietnam Pro", sans-serif !important;
-  font-weight: 400;
+  font-weight: 200;
   font-style: normal;
   color: var(--theme-black);
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: var(--theme-primary-light);
 }
 
 #topMenu {
   position: fixed;
-  height: 10.66vh;
+  display: flex;
+  height: 10vh;
   top: 0;
   right: 0;
   left: 0;
@@ -30,6 +37,8 @@ html {
   line-height: 0.75em;
   font-weight: 100;
   z-index: 10;
+  align-items: center;
+  justify-content: flex-end;
 }
 #topMenu .menu-item {
   display: inline-block;
@@ -39,21 +48,13 @@ html {
 #topMenu .menu-item a {
   display: inline-block;
   text-decoration: none;
-  color: var(--theme-primary);
+  color: var(--theme-primary-light);
   font-weight: 600;
 }
 #topMenu .menu-item a:hover {
   text-decoration: none;
-  color: var(--theme-primary-light);
+  color: var(--theme-secondary-light);
   font-weight: 600;
-}
-#topMenu .menu-item a:hover::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 5px;
-  margin-top: 5px;
-  background-color: var(--theme-primary-light);
 }
 
 #contentWrapper {
@@ -115,10 +116,114 @@ html {
   display: block;
   align-self: center;
 }
+
+.project-name {
+  font-size: 2.5em;
+}
 .project {
+  display: flex;
   margin-left: -100px;
   margin-right: -100px;
   padding: 9.25vh 100px;
+  justify-content: space-between;
+  background-color: var(--theme-primary);
+}
+.project .info {
+  display: inline-block;
+  width: 50%;
+  padding-right: 2.5vw;
+  vertical-align: top;
+}
+.project .info .project-name,
+.project .info p {
+  text-align: right;
+}
+.project .preview {
+  display: inline-block;
+  width: 49%;
+  padding-left: 2.5vw;
+  flex: 2;
+}
+.project.flipped {
+  flex-direction: row-reverse;
+  background-color: var(--theme-white);
+}
+.project.flipped .info {
+  padding-left: 2.5vw;
+  color: var(--theme-black);
+}
+.project.flipped .info .project-name {
+  text-align: left;
+}
+.project.flipped .preview {
+  padding-right: 2.5vw;
+}
+.preview .main-image {
+  display: inline-block;
+  width: 80%;
+  height: 600px;
+  background-color: #bababa;
+}
+.preview .side {
+  display: inline-block;
+  width: 19%;
+  height: 400px;
+  vertical-align: top;
+}
+.side .secondary-image {
+  width: 100%;
+  height: 32.5%;
+  margin-bottom: 5px;
+  background-color: #bababa;
+}
+
+#work .view-more {
+  display: block;
+  margin: 9.25vh 0;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: var(--theme-primary-light);
+}
+#work .view-more:hover {
+  color: var(--theme-secondary-light);
+}
+
+footer {
+  position: relative;
+  display: grid;
+  height: 115px;
+  background-color: var(--theme-secondary);
+  grid-template-columns: auto 100px auto;
+  color: var(--theme-white);
+  align-items: center;
+}
+footer .left {
+  grid-column: 1;
+}
+footer .left p,
+footer .left a {
+  text-align: right;
+  color: var(--theme-white);
+}
+footer .mid {
+  grid-column: 2;
+}
+footer .mid p {
+  text-align: center;
+}
+footer .right {
+  grid-column: 3;
+}
+footer .right p,
+footer .right a {
+  text-align: left;
+  color: var(--theme-white);
+}
+
+footer .right a:hover {
+  color: var(--theme-primary-light);
 }
 
 /*** OVERRIDES ***/

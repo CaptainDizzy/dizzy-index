@@ -17,17 +17,15 @@
   </head>
   <body>
     <div id="topMenu">
-      <div class="menu-item"><a href="">Work</a></div>
+      <div class="menu-item"><a href="">Recent Projects</a></div>
       <!--<div class="menu-item"><a href="">Art</a></div>-->
       <!--<div class="menu-item"><a href="">About Me</a></div>-->
     </div>
     <div id="contentWrapper">
-      <div class="width-wrapper">
-        <div id="hero">
-          <h1 class="title">Hi, I'm Dizzy!</h1>
-          <span class="title-note">(My legal name is Davis.)</span>
-          <h2 class="subtitle">I design things. Want to see?</h2>
-        </div>
+      <div id="hero">
+        <h1 class="title">Hi, I'm Dizzy!</h1>
+        <span class="title-note">(My legal name is Davis.)</span>
+        <h2 class="subtitle">I design things. Want to see?</h2>
       </div>
       <div id="heroAngle">
         <svg viewBox="0 0 1905 568" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -92,22 +90,37 @@
           </div>
         </div>
 
-        <!-- <div class="project secondary-bg">
+        <div class="project secondary-bg">
           <div class="info white-text">
-            <h2 class="project-name">
-              Project Name
-            </h2>
-            <p>Lorem ipsum dolor sit amet consectetur. Eget odio nibh urna blandit justo facilisi nec pharetra. Arcu proin morbi quis odio duis. In ipsum aliquet amet eu in. Augue fames arcu elementum feugiat. Pharetra rhoncus arcu neque pulvinar dignissim a quam leo sit. Id sit quis pellentesque enim nec fringilla. Cras nullam at viverra velit massa faucibus eu a a. Feugiat in fermentum id malesuada massa feugiat egestas odio platea. Lectus volutpat enim nisl magna fermentum. Sagittis amet eget tellus eu. Cras tortor odio ut ac ut phasellus phasellus. In ut odio mattis ullamcorper. Eu nunc augue vitae laoreet. Bibendum vel ac curabitur id donec in.</p>
+            <h2 class="project-name">Robot in the Woods (WIP)</h2>
+            <h3 class="project-type">Game/Character Design & Development</h3>
+            <p>Robot in the Woods is an in development art game designed and built by myself in Godot 4. The original concept art shown here was made in Clip Studio, but the character puppet and test animation was made in Photoshop. This is a personal art project I currently working on about, as the name suggests, a robot in the woods. It's a slow paced, narrative, art game where you play as a robot searching the woods for their owner, overcoming obstacles and puzzles as the narrative is slowly revealed around the player.</p>
+            <h3>The Idea</h3>
+            <p>The inspiration for Robot in the Woods hit me while sketching out characters and GUI designs as both practice and looking for something that stuck. I've always been a fan of lanky, humanoid robots with monitors or other simple-shaped objects as heads, and I've always enjoyed atmospheric games and media that hint at a larger world without ever explicitly telling you. Why are they searching in the woods? What's up with the city far in the background? Keep going and maybe you'll find out. Ultimately the game is about self discovery and understanding, but it's also just fun pretending to be a robot lost in the woods.</p>
+            <h3>The Design</h3>
+            <p>Apart from being a Cool Robot Nerd™, I'm a really big fan of pixel art. One of the objectives of this game is to find ways to make seemingly simple, low-res pixel art look beautiful or awe inspiring. Foreground objects are mostly silhouetted while the background consists of multiple layers of depth. The obstacles or any tasks at hand are plain, to the point, and immediate, whereas the world in which you're in is vast and beckoning, and sometime ominous, but always just out of reach. It's supposed to evoke the feeling of loneliness in a large, lively land; like being a stranger in your own home.</p>
+            <p>Why is this on my UI/UX & Front-End Dev portfolio? The dev part is obvious, but a key idea in this project is communicating the story and objectives and game mechanics without any exposition or tooltips or interface at all outside of the necessary "New Game" start menu. This is as much of an excercise in UX as it is in development. How do you convey "this is an object you can interact with" without "press x to interact" or just forcing the player to guess blindly? That's the experiment. This is a work in progress so I'm still figuring a lot of that out myself, but that's my job as a UX designer, and that's why this belongs here. Once this case study is complete, it will probably deserve it's own page.</p>
+            <h3>The Development</h3>
+            <p>While I'm talking about things I obsess over, procedural generation is probably in the top three. I want this game to be a narrative art game while also having replayability and a sense of surprize. To do this, I created two systems in Godot: one that procedurally generates the ground the player walks on, both in shape and also foilage; and one that randomly generates the clouds and background trees, shrubs, rocks, etc. By creating the ground in random, small to medium size "chunks" one after the other, I'm also able to map a path array that sticks to roughly the top center of each chunk, creating both a spawn path for plants and objects, and a surface to walk on. This path can vary from directly on top of the chunk to just below it, adding an extra level of depth to the environment. Not all ground is even.</p>
+            <p>I look forward to sharing more about this project as it grows, and I hope you'll get to play the finished version sometime sooner than later!</p>
           </div>
           <div class="preview">
-            <div class="main-image"></div>
+            <div class="main-image">
+              <img src="img\robot\consept-art-mock.png" alt="">
+            </div>
             <div class="side">
-              <div class="secondary-image"></div>
-              <div class="secondary-image"></div>
-              <div class="secondary-image"></div>
+              <div class="secondary-image">
+                <img src="img\robot\walk-animation.gif" alt="">
+              </div>
+              <div class="secondary-image">
+                <img src="img\robot\character-animation-breakdown.png" alt="">
+              </div>
+              <div class="secondary-image">
+                <img src="img\robot\development-peek.png" alt="">
+              </div>
             </div>
           </div>
-        </div> -->
+        </div>
 
         <a class="view-more" href="https://dizzydesigns.myportfolio.com/" target="_blank">View more of my previous work on my Adobe Portfolio. ></a>
       </section>

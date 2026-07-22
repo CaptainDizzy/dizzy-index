@@ -23,12 +23,11 @@ h2 {
   margin: 0;
 }
 h3 {
-  margin: 0;
+  margin: 0 0 0.5em 0;
   font-size: 1.5em;
 }
 p {
-  margin-top: 1.25em;
-  margin-bottom: 2em;
+  margin: 0 0 2em 0;
   font-size: 18px;
 }
 a {
@@ -73,17 +72,21 @@ a:hover {
 }
 
 #contentWrapper {
-  margin-top: 115px;
+  width: 100%;
+  overflow: hidden;
 }
 .width-wrapper {
   margin: 0;
-  padding: 0 100px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #hero {
   position: relative;
   height: 66vh;
   margin-top: 34vh;
+  margin-left: 20vh;
   text-align: Left;
   color: var(--theme-primary);
 }
@@ -136,14 +139,42 @@ a:hover {
 .project-type {
   font-weight: 200;
   font-size: 1.75em;
+  margin-bottom: 1.5em;
 }
 .project {
+  position: relative;
   display: flex;
-  margin-left: -100px;
-  margin-right: -100px;
-  padding: 9.25vh 100px;
+  padding: 9.25vh 0;
   justify-content: space-between;
   background-color: var(--theme-primary);
+}
+.project::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: var(--theme-primary);
+  height: 100%;
+  width: calc(100vw - 1440px);
+  margin-left: calc((100vw - 1440px) * -1);
+  margin-top: -9.25vh;
+}
+.project::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: var(--theme-primary);
+  height: 100%;
+  width: calc((100vw - 1440px) / 2);
+  margin-left: 1440px;
+  margin-top: -9.25vh;
+}
+.project.flipped::before,
+.project.flipped::after {
+  display: none;
+}
+.project.secondary-bg::before,
+.project.secondary-bg::after {
+  background-color: var(--theme-secondary);
 }
 .project .info {
   display: inline-block;
@@ -162,7 +193,7 @@ a:hover {
   padding-left: 2.5vw;
   flex: 2;
   gap: 10px;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-direction: column;
 }
 .project.flipped {
@@ -184,14 +215,14 @@ a:hover {
 .preview .main-image {
   display: flex;
   width: 100%;
-  height: 55.5vh;
+  height: 30vh;
   justify-content: center;
   overflow: hidden;
 }
 .preview .side {
   display: flex;
   width: 100%;
-  height: 37vh;
+  height: 20vh;
   gap: 10px;
   vertical-align: top;
   justify-content: center;

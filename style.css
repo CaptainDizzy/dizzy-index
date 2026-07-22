@@ -218,7 +218,7 @@ footer {
   position: relative;
   display: grid;
   height: 115px;
-  background-color: var(--theme-secondary);
+  background-color: var(--theme-primary);
   grid-template-columns: auto 100px auto;
   color: var(--theme-white);
   align-items: center;

@@ -1,6 +1,6 @@
 /*** VARIABLES ***/
 :root {
-  --theme-white: #efefef;
+  --theme-white: #fafafa;
   --theme-black: #1a1a1a;
   --theme-primary: #37691e;
   --theme-primary-light: #77c400;
@@ -16,6 +16,19 @@ html {
   font-style: normal;
   color: var(--theme-black);
 }
+h1 {
+  margin: 0;
+}
+h2 {
+  margin: 0;
+}
+h3 {
+  margin: 0;
+}
+p {
+  margin-top: 0.75em;
+  margin-bottom: 1.25em;
+}
 a {
   text-decoration: none;
 }
@@ -26,7 +39,7 @@ a:hover {
 #topMenu {
   position: fixed;
   display: flex;
-  height: 10vh;
+  height: 5vh;
   top: 0;
   right: 0;
   left: 0;
@@ -58,8 +71,6 @@ a:hover {
 }
 
 #contentWrapper {
-  height: 100vh;
-  width: 100%;
   margin-top: 115px;
 }
 .width-wrapper {
@@ -120,6 +131,10 @@ a:hover {
 .project-name {
   font-size: 2.5em;
 }
+.project-type {
+  font-weight: 200;
+  font-size: 1.75em;
+}
 .project {
   display: flex;
   margin-left: -100px;
@@ -134,15 +149,19 @@ a:hover {
   padding-right: 2.5vw;
   vertical-align: top;
 }
-.project .info .project-name,
-.project .info p {
+.info h2,
+.info h3,
+.info p {
   text-align: right;
 }
 .project .preview {
-  display: inline-block;
+  display: inline-flex;
   width: 49%;
   padding-left: 2.5vw;
   flex: 2;
+  gap: 10px;
+  justify-content: space-between;
+  flex-direction: column;
 }
 .project.flipped {
   flex-direction: row-reverse;
@@ -152,29 +171,34 @@ a:hover {
   padding-left: 2.5vw;
   color: var(--theme-black);
 }
-.project.flipped .info .project-name {
+.project.flipped .info h2,
+.project.flipped .info h3,
+.project.flipped .info p {
   text-align: left;
 }
 .project.flipped .preview {
   padding-right: 2.5vw;
 }
 .preview .main-image {
-  display: inline-block;
-  width: 80%;
-  height: 600px;
-  background-color: #bababa;
+  display: flex;
+  width: 100%;
+  height: 55.5vh;
+  justify-content: center;
+  overflow: hidden;
 }
 .preview .side {
-  display: inline-block;
-  width: 19%;
-  height: 400px;
+  display: flex;
+  width: 100%;
+  height: 37vh;
+  gap: 10px;
   vertical-align: top;
+  justify-content: center;
+  flex-direction: row;
 }
 .side .secondary-image {
-  width: 100%;
-  height: 32.5%;
-  margin-bottom: 5px;
-  background-color: #bababa;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 
 #work .view-more {
@@ -271,4 +295,7 @@ footer .right a:hover {
 }
 .accent-bg {
   background-color: var(--theme-accent);
+}
+.justify-right {
+  justify-content: right !important;
 }

@@ -126,10 +126,11 @@ a:hover {
 
 #work .title {
   position: absolute;
+  display: block;
   top: 95vh;
   left: 0;
   right: 0;
-  display: block;
+  font-size: 3em;
   align-self: center;
 }
 

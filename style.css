@@ -256,6 +256,9 @@ footer {
   color: var(--theme-white);
   align-items: center;
 }
+footer p {
+  margin: 0;
+}
 footer .left {
   grid-column: 1;
 }

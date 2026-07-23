@@ -291,7 +291,7 @@ footer .right a:hover {
 }
 
 /*** RESPONSIVE STYLES ***/
-@media screen and (width < 1440px) {
+@media all and (width < 1440px) {
   #hero .subtitle {
     width: 360px;
     line-height: normal;
@@ -302,7 +302,7 @@ footer .right a:hover {
   }
 }
 
-@media screen and (width <= 1080px) {
+@media all and (width <= 1080px) {
   #hero {
     margin-left: 5vw;
   }
@@ -311,7 +311,7 @@ footer .right a:hover {
   }
 }
 
-@media screen and (width <= 600px) {
+@media all and (width <= 600px) {
   #topMenu {
     display: none;
   }

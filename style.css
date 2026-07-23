@@ -37,6 +37,9 @@ a:hover {
   color: var(--theme-primary-light);
 }
 
+#mobileMenu {
+  display: none;
+}
 #topMenu {
   position: fixed;
   display: flex;
@@ -303,9 +306,64 @@ footer .right a:hover {
   #hero {
     margin-left: 5vw;
   }
+  p {
+    font-size: 1em;
+  }
 }
 
 @media screen and (width <= 600px) {
+  #topMenu {
+    display: none;
+  }
+  #mobileMenu {
+    display: block;
+  }
+  #mobileMenu #menu-btn {
+    position: fixed;
+    display: block;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    margin: 10px;
+    background-color: var(--theme-white);
+    opacity: 66%;
+    z-index: 10;
+  }
+  #mobileMenu #menu-btn span {
+    display: block;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1em;
+    color: var(--theme-primary);
+  }
+  #mobileMenu .full-menu {
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 35px 25px 0 25px;
+    background-color: var(--theme-primary);
+    z-index: 9;
+  }
+  #mobileMenu .full-menu .menu-item {
+    display: block;
+    width: 100%;
+    padding: 25px 50px;
+    border-bottom: solid 1px var(--theme-white);
+  }
+  #mobileMenu .full-menu .menu-item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 1.25em;
+    font-weight: 300;
+    text-align: center;
+    color: var(--theme-white);
+  }
+
   #hero {
     margin-top: 10vh;
     margin-left: 5vw;
@@ -322,7 +380,7 @@ footer .right a:hover {
   #heroAngle svg {
     position: absolute;
     height: 10vh;
-    bottom: 179px;
+    bottom: 24vh;
   }
   #work .title {
     position: relative;
@@ -342,6 +400,7 @@ footer .right a:hover {
   }
   .project .info {
     width: 100%;
+    padding-top: 5vh;
   }
   .info h2,
   .info h3,
@@ -373,6 +432,7 @@ footer .right a:hover {
   footer .left a,
   footer .right p,
   footer .right a {
+    display: block;
     text-align: center;
   }
   footer .left {
@@ -389,6 +449,12 @@ footer .right a:hover {
 }
 
 /*** OVERRIDES ***/
+.open {
+  display: block !important;
+}
+.closed {
+  display: none !important;
+}
 .center-text {
   text-align: center;
 }

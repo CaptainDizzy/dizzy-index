@@ -1,5 +1,5 @@
 function init() {
-  const menu = document.querySelector(".full-menu");
+  console.log("Basically '_on_ready()'");
 }
 
 function toggleMenu() {

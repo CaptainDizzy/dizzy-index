@@ -37,6 +37,14 @@ a:hover {
   color: var(--theme-primary-light);
 }
 
+.flex-row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 #mobileMenu {
   display: none;
 }
@@ -143,22 +151,16 @@ section {
   position: relative;
   display: flex;
   padding: 9.25vh 0;
-  background-color: var(--theme-primary);
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  background-color: var(--theme-primary);
   color: var(--theme-white);
 }
 section.alt {
   flex-direction: row-reverse;
   background-color: var(--theme-white);
   color: var(--theme-black);
-}
-.project {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 section::before {
   content: "";
@@ -326,6 +328,11 @@ footer .right a:hover {
 }
 
 @media (max-width: 600px) {
+  .flex-row {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
   #topMenu {
     display: none;
   }
@@ -407,15 +414,11 @@ footer .right a:hover {
   section {
     padding: 3vh 0;
   }
-  .project {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
   section.alt {
     flex-direction: column-reverse;
     align-items: center;
   }
-  .project .info {
+  .info {
     width: 100%;
     padding-top: 5vh;
   }
@@ -424,7 +427,7 @@ footer .right a:hover {
   .info p {
     text-align: center;
   }
-  .project .preview {
+  .preview {
     width: 100%;
     flex: 2;
     justify-content: flex-start;

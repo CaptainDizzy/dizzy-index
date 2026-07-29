@@ -129,7 +129,7 @@ a:hover {
   stroke: var(--theme-primary);
 }
 
-#work .title {
+#contentBody .title {
   position: absolute;
   display: block;
   top: 95vh;
@@ -139,22 +139,28 @@ a:hover {
   align-self: center;
 }
 
-.project-name {
-  font-size: 2.5em;
+section {
+  position: relative;
+  display: flex;
+  padding: 9.25vh 0;
+  background-color: var(--theme-primary);
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: var(--theme-white);
 }
-.project-type {
-  font-weight: 200;
-  font-size: 1.75em;
-  margin-bottom: 1.5em;
+section.alt {
+  flex-direction: row-reverse;
+  background-color: var(--theme-white);
+  color: var(--theme-black);
 }
 .project {
   position: relative;
   display: flex;
-  padding: 9.25vh 0;
+  flex-direction: row;
   justify-content: space-between;
-  background-color: var(--theme-primary);
 }
-.project::before {
+section::before {
   content: "";
   position: absolute;
   display: block;
@@ -164,7 +170,7 @@ a:hover {
   margin-left: calc((100vw - 1440px) * -1);
   margin-top: -9.25vh;
 }
-.project::after {
+section::after {
   content: "";
   position: absolute;
   display: block;
@@ -174,16 +180,16 @@ a:hover {
   margin-left: 1440px;
   margin-top: -9.25vh;
 }
-.project.flipped::before,
-.project.flipped::after {
+section.alt::before,
+section.alt::after {
   display: none;
 }
-.project.secondary-bg::before,
-.project.secondary-bg::after {
+section.secondary-bg::before,
+section.secondary-bg::after {
   background-color: var(--theme-secondary);
 }
-.project .info {
-  display: inline-block;
+.info {
+  display: block;
   width: 50%;
   padding-right: 2.5vw;
   vertical-align: top;
@@ -193,8 +199,16 @@ a:hover {
 .info p {
   text-align: right;
 }
-.project .preview {
-  display: inline-flex;
+.section-title {
+  font-size: 2.5em;
+}
+.section-subtitle {
+  font-weight: 200;
+  font-size: 1.75em;
+  margin-bottom: 1.5em;
+}
+.preview {
+  display: flex;
   width: 49%;
   padding-left: 2.5vw;
   flex: 2;
@@ -202,20 +216,18 @@ a:hover {
   justify-content: flex-start;
   flex-direction: column;
 }
-.project.flipped {
+section.alt {
   flex-direction: row-reverse;
-  background-color: var(--theme-white);
 }
-.project.flipped .info {
+section.alt .info {
   padding-left: 2.5vw;
-  color: var(--theme-black);
 }
-.project.flipped .info h2,
-.project.flipped .info h3,
-.project.flipped .info p {
+section.alt .info h2,
+section.alt .info h3,
+section.alt .info p {
   text-align: left;
 }
-.project.flipped .preview {
+section.alt .preview {
   padding-right: 2.5vw;
 }
 .preview .main-image {
@@ -240,7 +252,7 @@ a:hover {
   overflow: hidden;
 }
 
-#work .view-more {
+#contentBody .view-more {
   display: block;
   margin: 9.25vh 0;
   text-align: center;
@@ -249,7 +261,7 @@ a:hover {
   font-weight: 500;
   color: var(--theme-primary-light);
 }
-#work .view-more:hover {
+#contentBody .view-more:hover {
   color: var(--theme-secondary-light);
 }
 
@@ -298,7 +310,7 @@ footer .right a:hover {
     width: 360px;
     line-height: normal;
   }
-  .project {
+  section {
     padding-left: 5vw;
     padding-right: 5vw;
   }
@@ -369,7 +381,9 @@ footer .right a:hover {
   #hero {
     margin-top: 10vh;
   }
-  #hero .title {
+  #hero .title,
+  #hero .title-note {
+    width: 100%;
     text-align: center;
     line-height: 1em;
   }
@@ -383,19 +397,21 @@ footer .right a:hover {
     height: 10vh;
     bottom: 0;
   }
-  #work .title {
+  #contentBody .title {
     position: relative;
     line-height: 1em;
     padding: 25px 0;
     top: auto;
     background-color: var(--theme-primary);
   }
-  .project {
+  section {
     padding: 3vh 0;
+  }
+  .project {
     flex-direction: column-reverse;
     align-items: center;
   }
-  .project.flipped {
+  section.alt {
     flex-direction: column-reverse;
     align-items: center;
   }

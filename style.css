@@ -45,6 +45,13 @@ a:hover {
   justify-content: space-between;
   align-items: flex-start;
 }
+.flex-col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 .full {
   display: block;
   width: 100%;
@@ -158,11 +165,7 @@ a:hover {
 
 section {
   position: relative;
-  display: flex;
   padding: 9.25vh 0;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
   background-color: var(--theme-primary);
   color: var(--theme-white);
 }
@@ -373,6 +376,18 @@ section.alt .preview {
   position: relative;
   display: block;
   width: 100%;
+}
+
+.highlight {
+  display: flex;
+  gap: 2em;
+}
+.highlight .img-wrapper,
+.highlight-blurb p {
+  display: inline-block;
+}
+.highlight .img-wrapper {
+  width: 5.25vw;
 }
 
 footer {

@@ -28,7 +28,7 @@ h3 {
 }
 p {
   margin: 0 0 2em 0;
-  font-size: 18px;
+  font-size: 1.125em;
   line-height: 1.33em;
 }
 a {
@@ -44,6 +44,10 @@ a:hover {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+}
+.full {
+  display: block;
+  width: 100%;
 }
 .half {
   display: inline-block;
@@ -314,6 +318,61 @@ section.alt .preview {
 .list-block ul li {
   font-size: 1.125em;
   line-height: 1.25em;
+}
+
+#resumeExperience {
+  display: flex;
+  margin-left: -15%;
+  margin-top: 3em;
+  gap: 1.5vw;
+}
+.summary h3 {
+  margin-bottom: 0;
+}
+.summary h3,
+.summary p,
+.summary span {
+  text-align: right;
+  line-height: 1.25em;
+}
+.company-name {
+  margin-bottom: 5px;
+  margin-top: 1em;
+  font-weight: 500;
+}
+.position-date {
+  margin: 0;
+  font-weight: 300;
+  color: var(--theme-primary);
+}
+.position-date span {
+  font-weight: 200;
+  font-size: 0.875em;
+  color: #666666;
+}
+
+#resumeThumb .overlay-wrapper {
+  position: relative;
+  display: block;
+  width: 22vw;
+}
+#resumeThumb .overlay-wrapper:hover::before {
+  content: "Click for full-sized resume";
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding-top: 55%;
+  text-align: center;
+  font-weight: 700;
+  background-color: #00000080;
+  color: #fff;
+  z-index: 5;
+}
+#resumeThumb img {
+  position: relative;
+  display: block;
+  width: 100%;
 }
 
 footer {

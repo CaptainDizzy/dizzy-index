@@ -45,6 +45,10 @@ a:hover {
   justify-content: space-between;
   align-items: flex-start;
 }
+.half {
+  display: inline-block;
+  width: 49.5%;
+}
 
 #mobileMenu {
   display: none;
@@ -177,11 +181,11 @@ section::after {
   content: "";
   position: absolute;
   display: block;
-  background-color: var(--theme-primary);
   height: 100%;
   width: calc((100vw - 1440px) / 2);
   margin-left: 1440px;
   margin-top: -9.25vh;
+  background-color: var(--theme-primary);
 }
 section.alt::before,
 section.alt::after {
@@ -195,7 +199,6 @@ section.secondary-bg::after {
   display: block;
   width: 50%;
   padding-right: 2.5vw;
-  vertical-align: top;
 }
 .info h2,
 .info h3,
@@ -268,6 +271,51 @@ section.alt .preview {
   color: var(--theme-secondary-light);
 }
 
+.bio-pic img {
+  display: block;
+  justify-self: center;
+}
+
+#nutshellList {
+  position: relative;
+  display: grid;
+  padding: 2.25em 2.25em 1.125em 2.25em;
+  grid-template-columns: 50% 50%;
+  grid-auto-rows: auto auto;
+  align-content: space-between;
+  background-color: var(--theme-secondary);
+  color: var(--theme-white);
+}
+/* FULL BLEED */
+#nutshellList::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: calc((100vw - 1375px) / 2);
+  margin-left: 675px;
+  background-color: var(--theme-secondary);
+  z-index: 5;
+}
+/* OFFSET LINE
+#nutshellList::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 1.25em;
+  margin-left: 102%;
+  background-color: var(--theme-secondary);
+  z-index: 5;
+} */
+.list-block ul {
+  padding: 0 0 1.125em 1.125em;
+}
+.list-block ul li {
+  font-size: 1.125em;
+  line-height: 1.25em;
+}
+
 footer {
   position: relative;
   display: grid;
@@ -332,6 +380,10 @@ footer .right a:hover {
   .flex-row {
     flex-direction: column-reverse;
     align-items: center;
+  }
+  .half {
+    display: block;
+    width: 100%;
   }
 
   #topMenu {
@@ -415,6 +467,10 @@ footer .right a:hover {
   section {
     padding: 3vh 0;
   }
+  .section-title,
+  .section-subtitle {
+    text-align: center;
+  }
   section.alt {
     flex-direction: column-reverse;
     align-items: center;
@@ -444,6 +500,23 @@ footer .right a:hover {
   .side .secondary-image {
     height: 30vh;
   }
+
+  .bio-pic img {
+    width: 90%;
+    margin-top: 3vh;
+  }
+
+  #nutshellList {
+    position: relative;
+    display: grid;
+    padding: 2.25em 2.25em 1.125em 2.25em;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: auto auto;
+    align-content: space-between;
+    background-color: var(--theme-secondary);
+    color: var(--theme-white);
+  }
+
   footer {
     grid-auto-flow: column;
     grid-template-rows: auto auto;

@@ -300,7 +300,7 @@ section.alt .preview {
   display: block;
   height: 100%;
   width: calc((100vw - 1375px) / 2);
-  margin-left: 675px;
+  margin-left: 680px;
   background-color: var(--theme-secondary);
   z-index: 5;
 }
@@ -316,11 +316,14 @@ section.alt .preview {
   z-index: 5;
 } */
 .list-block ul {
-  padding: 0 0 1.125em 1.125em;
+  padding: 0 0 0 1.125em;
+  margin-bottom: 1.125em;
+  border-left: solid 1px #7d31ff;
 }
 .list-block ul li {
   font-size: 1.125em;
-  line-height: 1.25em;
+  line-height: 1.5em;
+  list-style: none;
 }
 
 #resumeExperience {
@@ -439,6 +442,16 @@ footer .right a:hover {
     padding-left: 5vw;
     padding-right: 5vw;
   }
+  .flex-row {
+    gap: 2.5vw;
+  }
+  .bio-pic img {
+    width: 100%;
+  }
+  #nutshellList::after {
+    width: calc((100vw - 42vw) / 2);
+    margin-left: 42vw;
+  }
 }
 
 @media (max-width: 1080px) {
@@ -458,6 +471,13 @@ footer .right a:hover {
   .half {
     display: block;
     width: 100%;
+  }
+  .flex-row.reverse {
+    flex-direction: column;
+    align-items: center;
+  }
+  .flex-row.reverse .half {
+    margin-bottom: 1.5em;
   }
 
   #topMenu {
@@ -526,6 +546,9 @@ footer .right a:hover {
     line-height: 1em;
     text-align: center;
   }
+  #greeting {
+    margin: 0 auto;
+  }
   #heroAngle svg {
     position: absolute;
     height: 10vh;
@@ -539,11 +562,16 @@ footer .right a:hover {
     background-color: var(--theme-primary);
   }
   section {
-    padding: 3vh 0;
+    padding: 3vh;
   }
   .section-title,
   .section-subtitle {
     text-align: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .section-subtitle {
+    margin-bottom: 1.5em;
   }
   section.alt {
     flex-direction: column-reverse;
@@ -582,13 +610,49 @@ footer .right a:hover {
 
   #nutshellList {
     position: relative;
-    display: grid;
+    display: block;
+    margin: 0 auto;
     padding: 2.25em 2.25em 1.125em 2.25em;
-    grid-template-columns: 50% 50%;
-    grid-auto-rows: auto auto;
-    align-content: space-between;
     background-color: var(--theme-secondary);
     color: var(--theme-white);
+  }
+  #nutshellList::after {
+    display: none;
+  }
+
+  #resumeExperience {
+    display: flex;
+    margin: 0 auto;
+    padding-bottom: 1.5em;
+    gap: 1.5vw;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  #resumeExperience p,
+  #resumeExperience h3 {
+    text-align: center;
+  }
+  #resumeThumb {
+    position: relative;
+    height: 350px;
+    margin-bottom: 1.5em;
+  }
+  #resumeThumb .overlay-wrapper,
+  #resumeThumb img {
+    width: 100%;
+  }
+
+  .highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
+    border-bottom: solid 1px;
+  }
+  .highlight .img-wrapper {
+    display: block;
+    width: 33%;
   }
 
   footer {

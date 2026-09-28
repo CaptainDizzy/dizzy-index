@@ -28,13 +28,37 @@ h3 {
 }
 p {
   margin: 0 0 2em 0;
-  font-size: 18px;
+  font-size: 1.125em;
+  line-height: 1.33em;
 }
 a {
   text-decoration: none;
 }
 a:hover {
   color: var(--theme-primary-light);
+}
+
+.flex-row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.flex-col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.full {
+  display: block;
+  width: 100%;
+}
+.half {
+  display: inline-block;
+  width: 49.5%;
 }
 
 #mobileMenu {
@@ -129,7 +153,7 @@ a:hover {
   stroke: var(--theme-primary);
 }
 
-#work .title {
+#contentBody .title {
   position: absolute;
   display: block;
   top: 95vh;
@@ -139,22 +163,18 @@ a:hover {
   align-self: center;
 }
 
-.project-name {
-  font-size: 2.5em;
-}
-.project-type {
-  font-weight: 200;
-  font-size: 1.75em;
-  margin-bottom: 1.5em;
-}
-.project {
+section {
   position: relative;
-  display: flex;
   padding: 9.25vh 0;
-  justify-content: space-between;
   background-color: var(--theme-primary);
+  color: var(--theme-white);
 }
-.project::before {
+section.alt {
+  flex-direction: row-reverse;
+  background-color: var(--theme-white);
+  color: var(--theme-black);
+}
+section::before {
   content: "";
   position: absolute;
   display: block;
@@ -164,37 +184,44 @@ a:hover {
   margin-left: calc((100vw - 1440px) * -1);
   margin-top: -9.25vh;
 }
-.project::after {
+section::after {
   content: "";
   position: absolute;
   display: block;
-  background-color: var(--theme-primary);
   height: 100%;
   width: calc((100vw - 1440px) / 2);
   margin-left: 1440px;
   margin-top: -9.25vh;
+  background-color: var(--theme-primary);
 }
-.project.flipped::before,
-.project.flipped::after {
+section.alt::before,
+section.alt::after {
   display: none;
 }
-.project.secondary-bg::before,
-.project.secondary-bg::after {
+section.secondary-bg::before,
+section.secondary-bg::after {
   background-color: var(--theme-secondary);
 }
-.project .info {
-  display: inline-block;
+.info {
+  display: block;
   width: 50%;
   padding-right: 2.5vw;
-  vertical-align: top;
 }
 .info h2,
 .info h3,
 .info p {
   text-align: right;
 }
-.project .preview {
-  display: inline-flex;
+.section-title {
+  font-size: 2.5em;
+}
+.section-subtitle {
+  font-weight: 200;
+  font-size: 1.75em;
+  margin-bottom: 1.5em;
+}
+.preview {
+  display: flex;
   width: 49%;
   padding-left: 2.5vw;
   flex: 2;
@@ -202,20 +229,18 @@ a:hover {
   justify-content: flex-start;
   flex-direction: column;
 }
-.project.flipped {
+section.alt {
   flex-direction: row-reverse;
-  background-color: var(--theme-white);
 }
-.project.flipped .info {
+section.alt .info {
   padding-left: 2.5vw;
-  color: var(--theme-black);
 }
-.project.flipped .info h2,
-.project.flipped .info h3,
-.project.flipped .info p {
+section.alt .info h2,
+section.alt .info h3,
+section.alt .info p {
   text-align: left;
 }
-.project.flipped .preview {
+section.alt .preview {
   padding-right: 2.5vw;
 }
 .preview .main-image {
@@ -240,7 +265,7 @@ a:hover {
   overflow: hidden;
 }
 
-#work .view-more {
+#contentBody .view-more {
   display: block;
   margin: 9.25vh 0;
   text-align: center;
@@ -249,8 +274,124 @@ a:hover {
   font-weight: 500;
   color: var(--theme-primary-light);
 }
-#work .view-more:hover {
+#contentBody .view-more:hover {
   color: var(--theme-secondary-light);
+}
+
+.bio-pic img {
+  display: block;
+  justify-self: center;
+}
+
+#nutshellList {
+  position: relative;
+  display: grid;
+  padding: 2.25em 2.25em 1.125em 2.25em;
+  grid-template-columns: 50% 50%;
+  grid-auto-rows: auto auto;
+  align-content: space-between;
+  background-color: var(--theme-secondary);
+  color: var(--theme-white);
+}
+/* FULL BLEED */
+#nutshellList::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: calc((100vw - 1375px) / 2);
+  margin-left: 680px;
+  background-color: var(--theme-secondary);
+  z-index: 5;
+}
+/* OFFSET LINE
+#nutshellList::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 1.25em;
+  margin-left: 102%;
+  background-color: var(--theme-secondary);
+  z-index: 5;
+} */
+.list-block ul {
+  padding: 0 0 0 1.125em;
+  margin-bottom: 1.125em;
+  border-left: solid 1px #7d31ff;
+}
+.list-block ul li {
+  font-size: 1.125em;
+  line-height: 1.5em;
+  list-style: none;
+}
+
+#resumeExperience {
+  display: flex;
+  margin-left: -15%;
+  margin-top: 3em;
+  gap: 1.5vw;
+}
+.summary h3 {
+  margin-bottom: 0;
+}
+.summary h3,
+.summary p,
+.summary span {
+  text-align: right;
+  line-height: 1.25em;
+}
+.company-name {
+  margin-bottom: 5px;
+  margin-top: 1em;
+  font-weight: 500;
+}
+.position-date {
+  margin: 0;
+  font-weight: 300;
+  color: var(--theme-primary);
+}
+.position-date span {
+  font-weight: 200;
+  font-size: 0.875em;
+  color: #666666;
+}
+
+#resumeThumb .overlay-wrapper {
+  position: relative;
+  display: block;
+  width: 22vw;
+}
+#resumeThumb .overlay-wrapper:hover::before {
+  content: "Click for full-sized resume";
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding-top: 55%;
+  text-align: center;
+  font-weight: 700;
+  background-color: #00000080;
+  color: #fff;
+  z-index: 5;
+}
+#resumeThumb img {
+  position: relative;
+  display: block;
+  width: auto;
+  height: 100%;
+}
+
+.highlight {
+  display: flex;
+  gap: 2em;
+}
+.highlight .img-wrapper,
+.highlight-blurb p {
+  display: inline-block;
+}
+.highlight .img-wrapper {
+  width: 5.25vw;
 }
 
 footer {
@@ -298,9 +439,19 @@ footer .right a:hover {
     width: 360px;
     line-height: normal;
   }
-  .project {
+  section {
     padding-left: 5vw;
     padding-right: 5vw;
+  }
+  .flex-row {
+    gap: 2.5vw;
+  }
+  .bio-pic img {
+    width: 100%;
+  }
+  #nutshellList::after {
+    width: calc((100vw - 42vw) / 2);
+    margin-left: 42vw;
   }
 }
 
@@ -314,6 +465,22 @@ footer .right a:hover {
 }
 
 @media (max-width: 600px) {
+  .flex-row {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .half {
+    display: block;
+    width: 100%;
+  }
+  .flex-row.reverse {
+    flex-direction: column;
+    align-items: center;
+  }
+  .flex-row.reverse .half {
+    margin-bottom: 1.5em;
+  }
+
   #topMenu {
     display: none;
   }
@@ -369,7 +536,9 @@ footer .right a:hover {
   #hero {
     margin-top: 10vh;
   }
-  #hero .title {
+  #hero .title,
+  #hero .title-note {
+    width: 100%;
     text-align: center;
     line-height: 1em;
   }
@@ -378,28 +547,38 @@ footer .right a:hover {
     line-height: 1em;
     text-align: center;
   }
+  #greeting {
+    margin: 0 auto;
+  }
   #heroAngle svg {
     position: absolute;
     height: 10vh;
     bottom: 0;
   }
-  #work .title {
+  #contentBody .title {
     position: relative;
     line-height: 1em;
     padding: 25px 0;
     top: auto;
     background-color: var(--theme-primary);
   }
-  .project {
-    padding: 3vh 0;
+  section {
+    padding: 3vh;
+  }
+  .section-title,
+  .section-subtitle {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .section-subtitle {
+    margin-bottom: 1.5em;
+  }
+  section.alt {
     flex-direction: column-reverse;
     align-items: center;
   }
-  .project.flipped {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-  .project .info {
+  .info {
     width: 100%;
     padding-top: 5vh;
   }
@@ -408,7 +587,7 @@ footer .right a:hover {
   .info p {
     text-align: center;
   }
-  .project .preview {
+  .preview {
     width: 100%;
     flex: 2;
     justify-content: flex-start;
@@ -424,6 +603,59 @@ footer .right a:hover {
   .side .secondary-image {
     height: 30vh;
   }
+
+  .bio-pic img {
+    width: 90%;
+    margin-top: 3vh;
+  }
+
+  #nutshellList {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding: 2.25em 2.25em 1.125em 2.25em;
+    background-color: var(--theme-secondary);
+    color: var(--theme-white);
+  }
+  #nutshellList::after {
+    display: none;
+  }
+
+  #resumeExperience {
+    display: flex;
+    margin: 0 auto;
+    padding-bottom: 1.5em;
+    gap: 1.5vw;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  #resumeExperience p,
+  #resumeExperience h3 {
+    text-align: center;
+  }
+  #resumeThumb {
+    position: relative;
+    margin-bottom: 1.5em;
+  }
+  #resumeThumb .overlay-wrapper,
+  #resumeThumb img {
+    width: 100%;
+    height: auto;
+  }
+
+  .highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
+    border-bottom: solid 1px;
+  }
+  .highlight .img-wrapper {
+    display: block;
+    width: 33%;
+  }
+
   footer {
     grid-auto-flow: column;
     grid-template-rows: auto auto;

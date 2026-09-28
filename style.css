@@ -378,7 +378,8 @@ section.alt .preview {
 #resumeThumb img {
   position: relative;
   display: block;
-  width: 100%;
+  width: auto;
+  height: 100%;
 }
 
 .highlight {
@@ -634,12 +635,12 @@ footer .right a:hover {
   }
   #resumeThumb {
     position: relative;
-    height: 350px;
     margin-bottom: 1.5em;
   }
   #resumeThumb .overlay-wrapper,
   #resumeThumb img {
     width: 100%;
+    height: auto;
   }
 
   .highlight {

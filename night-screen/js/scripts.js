@@ -79,7 +79,7 @@ function initEyes() {
     let xVect = getRandomInt(3, 86);
     let yVect = getRandomInt(5, 91);
     let scale = getRandomInt(25, 126);
-    let opacity = getRandomInt(15, 81);
+    let opacity = getRandomInt(15, 66);
     $("#eye-left").css("left", xVect + "vw");
     $("#eye-left").css("top", yVect + "vh");
     $("#eye-right").css("left", "calc(" + xVect + "vw + " + 125 * (scale / 100) + "px)");
@@ -105,7 +105,7 @@ function openEyes() {
 function closeEyes() {
   $(".eyes").removeClass("open");
   $(".eyes").addClass("closed");
-  let randomDelay = getRandomInt(5000, 30001);
+  let randomDelay = getRandomInt(5000, 60001);
   console.log("Eyes are closed. Eyes will reset in " + randomDelay / 1000 + " seconds.");
   setTimeout(initEyes, randomDelay);
 }

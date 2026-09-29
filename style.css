@@ -383,15 +383,23 @@ section.alt .preview {
 }
 
 .highlight {
+  position: relative;
   display: flex;
-  gap: 2em;
+  gap: 2vw;
 }
 .highlight .img-wrapper,
 .highlight-blurb p {
   display: inline-block;
 }
 .highlight .img-wrapper {
-  width: 5.25vw;
+  width: 10%;
+  margin-bottom: 2em;
+}
+.highlight .img-wrapper img {
+  width: 100%;
+}
+.highlight-blurb {
+  width: 89%;
 }
 
 footer {

@@ -689,6 +689,25 @@ footer .right a:hover {
   }
 }
 
+/*** ANIMATIONS ***/
+.anim.fade-in {
+  opacity: 0;
+  transform: translateX(-25px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.anim.fade-in.visible {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.anim.slide-up {
+  transform: translateY(100%);
+  transition: transform 1s ease-in;
+}
+.anim.slide-up.visible {
+  transform: translateY(0%);
+}
+
 /*** OVERRIDES ***/
 .open {
   display: block !important;

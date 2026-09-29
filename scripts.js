@@ -1,5 +1,5 @@
 function init() {
-  console.log("Basically '_on_ready()'");
+  //"Basically '_on_ready()'"
 }
 
 function toggleMenu() {
@@ -18,6 +18,19 @@ function toggleMenu() {
 }
 
 document.querySelector("#menu-btn").addEventListener("click", toggleMenu);
+
+const animObserver = new IntersectionObserver((elems) => {
+  elems.forEach((elem) => {
+    if (elem.isIntersecting) {
+      elem.target.classList.add("visible");
+      animObserver.unobserve(elem.target);
+      console.log(".anim observed");
+    }
+  });
+});
+
+const animElems = document.querySelectorAll(".anim");
+animElems.forEach((el) => animObserver.observe(el));
 
 document.addEventListener("DOMContentLoaded", () => {
   init();
